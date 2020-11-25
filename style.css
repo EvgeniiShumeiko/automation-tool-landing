@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;    
+    padding: 0 15px;
+}
+
+/* Вынес общий цвет для следующих элментов */
+.text, .heading-general, .heading-minor {
+    color: #1f3f68; 
+}
+
+/* Для параграфов */
+.text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
+
+/* Для заголовка h3 */
+.heading  {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+}
+
+/* Для заголовка h1 */
+.heading-general {
+    font-size: 64px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    line-height: 74px;
+    margin-bottom: 32px;
+}
+
+/* Для заголовка h2 */
+.heading-section {
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 74px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+/* Для заголовка h4 */
+.heading-minor {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+/* Для всех полей ввода (input[type=text], textarea) */
+.input-text {
+    border: 1px solid #356ead52;
+    border-radius: 10px;
+    padding: 20px 20px 20px 40px;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.input-text::placeholder {
+    opacity: 0.2;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.input-text_textarea {
+    max-height: 145px;
+}
+
+.button {
+    background: #5A98D0;
+    text-align: center;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    padding: 15px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.button_round {
+    border-radius: 10px;
+}
+
+.button_uppercase {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.jumbotron {
+    min-height: 768px;
+    background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+
+.jumbotron__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 34px;
+    height: 50px;
+}
+
+
+.jumbotron__main-banner {
+    flex-grow: 1;
+    padding-top: 115px;
+    background-image: url(img/jumbotron__background.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 44%;
+}
+
+.jumbotron__main-banner__heading {
+    width: 510px;
+}
+
+.jumbotron__main-banner__text {
+    width: 425px;
+}
+
+.jumbotron__main-banner__button {
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    padding: 15px 50px;
+    display: inline-block;
+    margin-top: 71px;
+}
+
+.what-we-do {
+    padding-top: 64px;
+}
+
+.card-box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+}
+
+.card-box__card {
+    display: flex;
+    flex-direction: column;
+    width: 359px;
+    padding: 44px 32px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+}
+
+.card-box__card__image {
+    align-self: center;
+    margin-bottom: 51px;
+}
+
+.card-box__card__link {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #5A98D0;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.card-box__card__link:after {
+    content: '';
+    background: url('img/right.svg');
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    margin-left:15px;
+    display: inline-flex;
+}
+
+.footer {
+    margin-top: 112px;
+}
+
+.project {
+    padding-top: 64px
+}
+
+.project__text {
+    width: 75%;
+    margin: 32px auto 64px;
+    color: #222222;
+    opacity: 1;
+    text-align: center;
+}
+
+.project__item {
+    position: relative;
+    flex-grow: 1;
+}
+
+.project__item_margin {
+    margin-right: 32px;
+}
+
+.project__item__image {
+    width: 100%;
+}
+
+.project__item__text {
+    position: absolute;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.project__item__text_top {
+    top: 64px;
+    right: 64px;
+}
+
+.project__item__text_parent{
+    top: 32px;
+    left: 32px;
+}
+
+.project__parent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.contact-us__title__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us__title_width_full {
+    margin-top: 55px;
+    padding: 50px 0;
+    background-image: url('img/contact-us__background.svg');
+    background-size: cover;
+    color: #fff
+}
+
+.contact-us__title__text {
+    max-width: 780px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding-top: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-us__content__aside {
+    width: 300px;
+    padding: 50px 0;
+}
+.contact-us__content__aside__item {
+    margin-top: 40px;
+}
+
+
+.contact-us__item-text {
+    font-weight: 300;
+    font-size: 16px;
+    color: #1F3F68;
+    opacity: 0.6;
+}
+
+.contact-us__list {
+    list-style-type: none;
+}
+
+.contact-us__list__item {
+    display: flex;
+    padding: 8px 0;
+}
+
+.contact-us__list__item::before {
+    display: inline-flex;
+    color: #1F3F68;
+    margin-right: 14px;
+    opacity: 0.6;
+}
+
+.contact-us__list__item_phone::before {
+    content: url('img/phone.svg');
+}
+
+.contact-us__list__item_portal::before {
+    content: url('img/portal.svg');
+}
+
+.contact-us__list__item_email::before {
+    content: url('img/email.svg');
+}
+
+
+.contact-us__heading-minor {
+    text-transform: uppercase;
+    color: #1F3F68;
+}
+
+.contact-us__content__aside__item:first-child {
+    margin-top: 0px;
+}
+
+.contact-us__content__form {
+    width: 100%;
+    max-width: 520px;
+    min-width: 320px;
+    padding: 56px;
+    background: #FFFFFF;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.contact-us__content__form__field {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-us__content__form__field__label {
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    color: #1F3F68;
+    opacity: 0.8;
+}
+
+.contact-us__content__form__button {
+    width: 100%;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    letter-spacing: 0.04em;
+}
+.contact-us__content {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.map {
+    margin-top: 96px;
+}
+
+.footer {
+    background: #316099;
+}
+
+.footer__banner {
+    padding-top: 91px;
+    padding-bottom: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__banner__lead {
+    width: 495px;
+}
+
+.footer__banner__lead__heading {
+    width: 340px;
+    font-weight: normal;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.footer__banner__lead__text {
+    color: #fff;
+}
+
+.footer__banner__button {
+    min-width: 200px;
+}
+
+.footer__bottom__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.footer__bottom__list__item {
+    flex-grow: 1;
+    flex-basis: 33.33%;
+    list-style-type: none;
+    margin-right: 32px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__bottom__list__item_margin_none {
+    margin-right: 0px;    
+}
+
+.footer__bottom__list__item__type {
+    color: #fff;
+    margin-right: 20px;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.footer__bottom__list__link {
+    text-decoration: none;
+    color:#fff;
+    opacity: 1;
+
+}
+
+
+.footer__bottom__copyright {
+    padding-bottom: 64px;
+    opacity: 0.4;
+    color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .input-text {
+        padding: 19px 20px 19px 40px;
+    }
+
+    .jumbotron__main-banner {
+        background-position: right 280px;
+    }
+
+    .contact-us__title_width_full {
+        margin-top: 50px;
+    }
+
+
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-box__card {
+        margin-bottom: 32px;
+    }
+
+    .project {
+        padding-top: 128px;
+    }
+
+    .contact-us__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-us__content__aside {
+        padding: 40px 0;
+    }
+
+    .contact-us__content__form {
+        padding: 54px;
+    }
+    
+    .map {
+        margin-top: 64px;
+    }
+
+    .footer__banner__lead {
+        width: 340px;
+    }
+    
+    .footer__banner__button {
+        min-width: 100px;
+        padding: 4px 31px;
+    }
+
+    .footer__bottom__list {
+        flex-direction: column;
+    }
+
+    .footer__bottom__list__item {
+        padding: 10px 0;
+    }
+
+    .footer__banner {
+        padding-top: 47px;
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width:667px)
+{
+    .footer__container {
+        padding: 0 124px;
+    }
+}
+
+@media (max-width: 667px) {
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .input-text {
+        font-size: 14px;
+        padding: 13px 20px 13px 20px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .jumbotron {
+        min-height: 376px;
+        padding-bottom: 41px;
+        box-sizing: border-box;
+    }
+
+    .contact-us__title_width_full {
+        margin-top: 30px;
+    }
+
+    .nav-menu {
+        margin-top: 24px
+    }
+
+    .heading-general {
+        font-size: 32px;
+        line-height: 37px;
+        margin-bottom: 12px;
+    }
+
+    .jumbotron__main-banner {
+        padding-top: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+
+    .jumbotron__main-banner__heading {
+        width: 100%;
+        text-align: center;
+    }
+
+    .jumbotron__main-banner__text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .jumbotron__main-banner__button {
+        padding: 0 8px;
+        font-size: 12px;
+
+    }
+
+    .heading {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .what-we-do {
+        padding-top: 48px;
+    }
+
+    .card-box {
+        padding-top: 32px;
+    }
+
+    .card-box__card {
+        width: 100%;
+    }
+
+    .input-text_textarea {
+        max-height: 100px;
+    }
+
+    .project {
+        padding-top: 64px;
+    }
+
+    .project__text {
+        width: 100%;
+    }
+
+    .project__item__text {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .project__item__text_top {
+        top: 16px;
+        right: 16px;
+    }
+
+    .project__parent {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+
+    .project__item__text_parent {
+        left: 16px;
+        top: 16px
+    }
+    
+    .project__item_margin {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .contact-us__title__text {
+        font-size: 16px;
+        letter-spacing: normal;
+    }
+
+    .contact-us__content__aside {
+        padding: 30px 0;
+    }
+
+    .heading-section {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .contact-us__content__form {
+        padding: 35px;
+    }
+    .map {
+
+        margin-top: 32px;
+        padding: 0;
+    }
+
+    .footer {
+        margin-top: 64px;
+    }
+
+    .footer__banner {
+        flex-direction: column;
+        padding-top: 18px;
+        padding-bottom: 41px;
+    }
+
+    .footer__banner__lead {
+        width: 100%;
+    }
+
+    .footer__banner__lead__heading {
+        width: 75%;
+        text-align: center;
+        margin: 0 auto 32px;
+    }
+
+    .footer__banner__lead__text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .footer__bottom__list {
+        padding: 32px 0;
+    }
+
+    .footer__bottom__copyright {
+        padding-bottom: 32px;
+    }
+}
